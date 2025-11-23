@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1: overwrites changes - could include cutomer_id, address_line_1, address_line_2, city, state/province, country, and postal_code
+
+Type 2: does not overwrite - would need to include all of the same columns as type 1, but would also need to include start_date and end_date, which would track when that address is effective. If end_date is null, then that address is their current address
 ```
 
 ***
